@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,IAAI;EACA,IAAI,EAAE,0BAAgB;EACtB,KAAK,EAJM,IAAI",
+"sources": ["source.sass"],
+"names": [],
+"file": "dest.css"
+}

@@ -1,0 +1,97 @@
+body {
+  background-color: #eaf0ff;
+  color: black; }
+
+hr.style1 {
+  border-top: 1px dotted #8c8b8b;
+  color: #D9DFEF;
+  width: auto;
+  max-width: 50%; }
+
+div.container {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+div.header {
+  width: auto;
+  max-width: 51%;
+  min-width: 51%;
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center; }
+div.navContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+div.banner-subtitle {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  font-size: 0.8em; }
+
+.image {
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  display: flex; }
+  .image #banner-img {
+    width: 100%;
+    height: 53.125em;
+    opacity: 0.8;
+    object-fit: cover; }
+  .image .banner-subhead {
+    position: absolute;
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 28%;
+    left: 25%;
+    right: 25%;
+    font-size: 1.3em; }
+  .image .banner-title {
+    position: absolute;
+    color: white;
+    top: 35%;
+    left: 25%;
+    right: 25%;
+    font-size: 4.3em; }
+  .image .banner-subtitle {
+    position: absolute;
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 47%;
+    left: 25%;
+    right: 25%;
+    font-size: 1.3em; }
+  .image #order {
+    position: absolute;
+    border-radius: 8px;
+    background-color: #F3735F;
+    color: white;
+    padding: 14px 40px;
+    top: 57%;
+    justify-content: center;
+    border: none; }
+
+.topnav {
+  overflow: hidden; }
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 0.75em;
+    font-family: Arial, Helvetica, sans-serif; }
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black; }
+    .topnav a.active {
+      background-color: teal;
+      color: white; }
+
+/*# sourceMappingURL=dest.css.map */

@@ -1,0 +1,130 @@
+$breakSmall: 1450px;
+$breakLarge:1451px;
+$fontStack: Arial,
+Helvetica,
+sans-serif;
+// $otherFont: Arial,
+// Helvetica,
+// sans-serif;
+$primaryColor: black;
+$backGround: #eaf0ff;
+$navActiveColor: teal;
+$divWidth: 6.25em;
+$fontSize: 6em;
+$margins:20px;
+$mwidth:100%;
+body {
+    background-color: $backGround;
+    color: $primaryColor;
+}
+
+hr {
+    &.style1 {
+        border-top: 1px dotted #8c8b8b;
+        color: #D9DFEF;
+        width: auto;
+        max-width: 50%;
+    }
+}
+
+div {
+    &.container {
+        max-width: $mwidth;
+        width: $mwidth;
+        display: flex;
+        justify-content: center;
+    }
+    &.header {
+        width: auto;
+        max-width: ($mwidth/2)+1%;
+        min-width: ($mwidth/2)+1%;
+        font-size: $fontSize/3;
+        margin-top: $margins/2;
+        margin-bottom: $margins/2;
+        display: flex;
+        justify-content: center;
+    }
+    &.navContainer {
+        width: $mwidth;
+        display: flex;
+        justify-content: center;
+    }
+    &.banner-subtitle {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+        font-size: 0.8em;
+    }
+}
+
+.image {
+    margin-top: $margins;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    display: flex;
+    #banner-img {
+        width: $mwidth;
+        height: $divWidth*8.5;
+        opacity: 0.8;
+        object-fit: cover;
+    }
+    .banner-subhead {
+        position: absolute;
+        color: whitesmoke;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        top: 28%;
+        left: 25%;
+        right: 25%;
+        font-size: 1.3em;
+    }
+    .banner-title {
+        position: absolute;
+        color: white;
+        top: 35%;
+        left: 25%;
+        right: 25%;
+        font-size: 4.3em;
+    }
+    .banner-subtitle {
+        position: absolute;
+        color: whitesmoke;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        top: 47%;
+        left: 25%;
+        right: 25%;
+        font-size: 1.3em;
+    }
+    #order {
+        position: absolute;
+        border-radius: 8px;
+        background-color: #F3735F;
+        color: white;
+        padding: 14px 40px;
+        top: 57%;
+        justify-content: center;
+        border: none;
+    }
+}
+
+.topnav {
+    overflow: hidden;
+    a {
+        float: left;
+        display: block;
+        color: $primaryColor;
+        text-align: center;
+        padding: ($margins/2)+4 ($margins/2)+6;
+        text-decoration: none;
+        font-size: ($fontSize/6)/1.33333;
+        font-family: $fontStack;
+        &:hover {
+            background-color: #ddd;
+            color: $primaryColor;
+        }
+        &.active {
+            background-color: $navActiveColor;
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,137 @@
+body {
+    background-color: #f2f3f4;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#pic {
+    margin-left: 100px;
+    max-width: 250px;
+    max-height: 250px;
+    min-width: 100px;
+    min-height: 100px;
+    height: auto;
+    width: auto;
+}
+
+#logo {
+    margin-left: 50px;
+    margin-right: 50px;
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 70px;
+    min-height: 70px;
+    margin-top: 20px;
+    height: auto;
+    width: auto;
+}
+
+th {
+    text-align: center;
+}
+
+
+/* tr:hover {background-color: #bdc3c7;} */
+
+.table1,
+td {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: flex-end;
+    border-bottom: 1px solid #ddd;
+}
+
+#tab2 {
+    background-color: #5dade2;
+}
+
+.studentInfo {
+    width: auto;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.table2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.row1 {
+    width: 86%;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 7%;
+    margin-right: 7%;
+    background-color: blanchedalmond;
+}
+
+.col1 {
+    min-width: 49%;
+    width: auto;
+    justify-content: flex-start;
+    margin-right: 1%;
+    background-color: blanchedalmond;
+}
+
+.col2 {
+    min-width: 49%;
+    width: auto;
+    justify-content: flex-end;
+    background-color: blanchedalmond;
+}
+
+.sem {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.subTotal {
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.grade {
+    border: 1px solid #ddd;
+}
+
+.total {
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.footer {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.final {
+    margin-left: auto;
+    margin-top: 50px;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+#final1 {
+    background-color: #AAA491;
+    color: white;
+}
