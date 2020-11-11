@@ -1,0 +1,21 @@
+
+<app-child [item]="currentItem" (outputEvent)="addItem($event)"></app-child>
+<h1>Child1 Start</h1>
+<p *ngFor="let item1 of childItem">{{item1}}</p>
+{{data}}
+<br>
+<h1>Service Start</h1>
+{{currentSercvice}}
+<h1 appHighlight>Child2 Start</h1>
+<app-child2></app-child2>
+
+<h1>Power</h1>
+
+<div>Normal power: <input [(ngModel)]="power"></div>
+<div>Boost factor: <input [(ngModel)]="factor"></div>
+
+{{power | pipePower: factor}}
+
+<p appHighlight>Highlight me!</p>
+
+<router-outlet></router-outlet>
