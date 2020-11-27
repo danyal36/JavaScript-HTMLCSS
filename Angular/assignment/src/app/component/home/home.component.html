@@ -1,0 +1,121 @@
+<mat-sidenav-container class="example-container" (backdropClick)="close()">
+  
+  <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
+    <mat-list>
+      <div mat-card-title>Product Hunt</div>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <div mat-line>abc</div>
+        <div mat-line> def </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <div mat-subheader>Notes</div>
+      <mat-list-item>
+        <mat-icon mat-list-icon>note</mat-icon>
+        <div mat-line>ghi</div>
+        <div mat-line> jkl</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+
+
+  <mat-toolbar>
+    <button mat-icon-button (click)="sidenav.open()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Product hunt</span>
+    <span class="example-spacer"></span>
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>Category Search</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem>Technology</button>
+        <button ngbDropdownItem>Games</button>
+        <button ngbDropdownItem>Hardware</button>
+        <button ngbDropdownItem>Software</button>
+      </div>
+    </div>
+    <span class="example-spacer"></span>
+
+    <div class="col-auto">
+      <div class="input-group sm-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text"><span class="material-icons">search</span></div>
+        </div>
+        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search">
+      </div>
+    </div>
+
+    <button class="signUpbutton" (click)="open(mymodal)">Log In</button>
+    <button mat-icon-button >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button >
+      <mat-icon>share</mat-icon>
+    </button>
+
+  </mat-toolbar>
+  <br>
+  <aside>
+    <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international
+      pavilions, award-winning fireworks and seasonal special events.</p>
+    <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international
+      pavilions, award-winning fireworks and seasonal special events.</p>
+    <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international
+      pavilions, award-winning fireworks and seasonal special events.</p>
+    <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international
+      pavilions, award-winning fireworks and seasonal special events.</p>
+    <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international
+      pavilions, award-winning fireworks and seasonal special events.</p>
+  </aside>
+  <div class="container">
+    <h1>
+      Top Discussed
+    </h1>
+    <div class="row">
+      <div class="col-sm" *ngFor="let item of products">
+        <app-dashboard [product]="item"></app-dashboard>
+
+      </div>
+    </div>
+    <hr>
+  </div>
+
+
+  <ng-template #mymodal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Log In</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text material-icons" id="basic-addon1">person</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+           #username>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text material-icons" id="basic-addon1">lock</span>
+          </div>
+          <input type="password" class="form-control" placeholder="Password" #pass>
+        </div>
+      </form>
+      <hr>
+      <div style="display: flex;justify-content: space-around">
+        <a href="">Forgot Password?</a>
+        <a href="">Register</a>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="login(username.value,pass.value);modal.close('Save click')">Log In</button>
+    </div>
+  </ng-template>
+
+
+</mat-sidenav-container>
