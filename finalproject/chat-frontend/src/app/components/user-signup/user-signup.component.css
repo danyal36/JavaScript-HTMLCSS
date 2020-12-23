@@ -1,0 +1,10 @@
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+.btn{
+    width: 300px;
+    margin-right: 18%;
+  }
+  a:hover{
+    cursor: pointer;
+  }

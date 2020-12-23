@@ -1,0 +1,28 @@
+.signUpbutton {
+    /* background-color: transparent; */
+    background-image: url('../../../assets/images/login.jpg');
+    background-size: cover;
+  
+    color: black;
+    min-height: 20px;
+    min-width: 50px;
+    width: 280px;
+    height: 280px;
+    border-radius: 150px;
+    justify-content: center;
+  }
+  .btn{
+    width: 300px;
+    margin-right: 18%;
+  }
+  .signUpbutton:hover {
+    /* background-color: #3A4050; */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+  
+  .start {
+    text-align: center;
+    margin-top: 12%;
+  }
+  

@@ -1,0 +1,37 @@
+<div class="start">
+    <button class="signUpbutton" (click)="open(mymodal)"></button>
+    <h2 style="margin: 10px 0 10px;text-align: center;"><b>Welcome To NextBridge ChatAPP</b></h2>
+    <h3 style="text-align: center; margin-left: -10px;">Click above to login</h3>
+  </div>
+    <ng-template #mymodal let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Log In</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      
+      <form [formGroup]="loginForm" (ngSubmit) = "onFormSubmit(loginForm.value)">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text material-icons" id="basic-addon1">person</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Username" formControlName="userName"  minlength="4">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text material-icons" id="basic-addon1">lock</span>
+          </div>
+          <input type="password" class="form-control" placeholder="Password" formControlName="password" >
+        </div>&nbsp;
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-outline-dark" (click)="modal.close()" >Log In</button>
+        </div>
+      </form>
+      <div class="modal-footer" style="display: flex;justify-content: space-around">
+        <a href="">Forgot Password?</a>
+        <app-user-signup></app-user-signup>
+    </div>
+    </div>
+  </ng-template>

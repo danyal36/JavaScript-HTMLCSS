@@ -1,0 +1,22 @@
+
+<nav class="navbar">
+    <span class="navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+    </span>
+    <a class="logo">NXB-Chat</a>
+    <ul class="main-nav" id="js-menu">
+     
+      <li >
+        <a [routerLink]="['/']" class="nav-links">Home</a>
+      </li>
+   
+      <li >
+        <a [routerLink]="['/chat']" class="nav-links">Chat</a>
+      </li>
+      <li *ngIf="guard.loggedIn === true">
+        <a (click)="logout()" class="nav-links">Logout</a>
+      </li>
+
+    </ul>
+  </nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,38 @@
+<a (click)="open(mymodal)">Register</a>
+
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Sign UP</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="registerForm" (ngSubmit) = "onFormSubmit(registerForm.value)">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text material-icons" id="basic-addon1">person</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" formControlName="userName"  minlength="4">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text material-icons" id="basic-addon1">email</span>
+        </div>
+        <input type="email" class="form-control" placeholder="Email" formControlName="email" >
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text material-icons" id="basic-addon1">lock</span>
+        </div>
+        <input type="password" class="form-control" placeholder="Password" formControlName="password" >
+      </div>&nbsp;
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-outline-dark" (click)="modal.close()" >Sign Up</button>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<!-- [routerLink]="['/auth/register']" -->
+<!-- signup(username.value,email.value,pass.value); -->
